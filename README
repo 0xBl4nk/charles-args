@@ -1,0 +1,9 @@
+$JAVA \
+    -Xmx6144M \
+    -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel \
+    -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel \
+    -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true \
+    -Dcharles.config="${XDG_CONFIG_HOME:-~/.config/charles}"/.charles.config \
+    -Djava.library.path="$CHARLES_LIB" \
+    -jar $CHARLES_LIB/charles.jar \
+    $*
